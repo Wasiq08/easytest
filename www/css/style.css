@@ -1,1 +1,17 @@
 /* Empty. Add your own CSS if you like */
+.bg{
+	background-image:url(../img/notebook.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	
+
+}
+.item.item-trns {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	color: white; 
+}
+.list{
+	background-color:#ffe680;
+
+}
