@@ -22,6 +22,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
+
+// .controller('ColorPickerCtrl', ['$scope', function($scope) {
+//   }])
+
+
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -67,7 +72,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
+  })
+.state('app.login', {
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/login.html'
+      }
+    }
   });
+
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });
