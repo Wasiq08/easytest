@@ -22,11 +22,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-
-// .controller('ColorPickerCtrl', ['$scope', function($scope) {
-//   }])
-
-
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -37,28 +32,28 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.addNote', {
+    url: '/notes',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/notes.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/Starred',
+  .state('app.favourites', {
+      url: '/favourites',
       views: {
         'menuContent': {
-          templateUrl: 'templates/Starred.html'
+          templateUrl: 'templates/favourites.html'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.notesDisplay', {
+      url: '/notesDisplay',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
+          templateUrl: 'templates/notesDisplay.html',
           controller: 'PlaylistsCtrl'
         }
       }
@@ -72,16 +67,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
-  })
-.state('app.login', {
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/login.html'
-      }
-    }
   });
-
-
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/notesDisplay');
 });
