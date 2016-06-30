@@ -57,7 +57,7 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'colorpicker-dr','ng
       views: {
         'menuContent': {
           templateUrl: 'templates/calender.html',
-          controller: 'calender'
+          controller: 'Calender'
         }
       }
     })
@@ -86,4 +86,4 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'colorpicker-dr','ng
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/notesDisplay');
 });
-var myAppModule = angular.module('MyApp', ['ui.rCalendar'])
+

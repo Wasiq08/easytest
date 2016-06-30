@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordova'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -57,19 +57,18 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('calender', function($scope, $cordovaCalendar) {
+.controller('Calender', function($scope, $cordovaCalendar) {
 
-      $scope.createEvent = function() {
-              $cordovaCalendar.createEvent({
-                  title: 'Space Race',
-                  location: 'The Moon',
-                  notes: 'Bring sandwiches',
-                  startDate: new Date(2015, 0, 15, 18, 30, 0, 0, 0),
-                  endDate: new Date(2015, 1, 17, 12, 0, 0, 0, 0)
-              }).then(function (result) {
-                  console.log("Event created successfully");
-              }, function (err) {
-                  console.error("There was an error: " + err);
-              });
-          }
-      });
+     $cordovaCalendar.createEvent({
+    title: 'Space Race',
+    location: 'The Moon',
+    notes: 'Bring sandwiches',
+    startDate: new Date(2015, 0, 6, 18, 30, 0, 0, 0),
+    endDate: new Date(2015, 1, 6, 12, 0, 0, 0, 0)
+  }).then(function (result) {
+    // success
+  }, function (err) {
+    // error
+  });
+
+ });
